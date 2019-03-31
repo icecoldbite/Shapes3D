@@ -7,12 +7,12 @@ public abstract class Prism implements Shape {
 
     @Override
     public double getSurfaceArea() {
-        return (getBaseArea() * 2) + (getFaceArea() * numberOfFaces);
+        return (getBaseArea() * 2) + (getAverageFaceArea() * numberOfFaces);
     }
 
     public abstract double getVolume();
 
     public abstract double getBaseArea();
-    public abstract double getFaceArea();
+    public abstract double getAverageFaceArea();
 
 }

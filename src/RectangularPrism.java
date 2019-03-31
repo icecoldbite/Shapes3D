@@ -3,8 +3,8 @@ public class RectangularPrism extends Prism {
     private double width;
     private double height;
 
-    public RectangularPrism(double numberOfFaces, double length, double width, double height) {
-        super(numberOfFaces);
+    public RectangularPrism(double length, double width, double height) {
+        super(4);
         this.length = length;
         this.width = width;
         this.height = height;
@@ -13,17 +13,29 @@ public class RectangularPrism extends Prism {
 
     @Override
     public double getVolume() {
-        return 0;
+        return getBaseArea() * height;
     }
 
     @Override
     public double getBaseArea() {
-        return 0;
+        return length * width;
     }
 
     @Override
-    public double getFaceArea() {
-        return 0;
+    public double getAverageFaceArea() {  //Takes the average of the height * width face and the height * length face
+        return (height * (length + width)) / 2;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
 

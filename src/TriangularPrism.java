@@ -1,21 +1,31 @@
 public class TriangularPrism extends Prism {
+    private double height;
+    private double sideLength;
 
-    public TriangularPrism(double numberOfFaces) {
-        super(numberOfFaces);
+    public TriangularPrism(double sideLength, double height) {
+        super(3);
     }
 
     @Override
     public double getVolume() {
-        return 0;
+        return getBaseArea() * height;
     }
 
     @Override
     public double getBaseArea() {
-        return 0;
+        return (Math.sqrt(3) / 4) * sideLength * sideLength;
     }
 
     @Override
-    public double getFaceArea() {
-        return 0;
+    public double getAverageFaceArea() {
+        return sideLength * height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getSideLength() {
+        return sideLength;
     }
 }
