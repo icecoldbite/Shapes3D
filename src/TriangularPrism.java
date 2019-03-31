@@ -4,6 +4,8 @@ public class TriangularPrism extends Prism {
 
     public TriangularPrism(double sideLength, double height) {
         super(3);
+        this.height = height;
+        this.sideLength = sideLength;
     }
 
     @Override
